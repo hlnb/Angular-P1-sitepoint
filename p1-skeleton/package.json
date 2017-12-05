@@ -1,0 +1,40 @@
+{
+    "name": "angular2-skeleton",
+    "version": "1.0.0",
+    "description": "angular 2 skeleton project",
+    "scripts": {
+        "start": "tsc && concurrently \"tsc -w\" \"lite-serve\" ",
+        "lite": "lite-server",
+        "tsc": "tsc",
+        "tsc:w": "tsc -w"
+    },
+    "license": "UNLICENSED",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/heb264/angular.git"
+    },
+    "dependencies": {
+        "@angular/common": "5.0.5",
+        "@angular/compiler": "5.0.5",
+        "@angular/core": "5.0.5",
+        "@angular/forms": "5.0.5",
+        "@angular/platform-browser": "5.0.5",
+        "@angular/platform-browser-dynamic": "5.0.5",
+        "@angular/router": "5.0.5",
+        "@angular/upgrade": "5.0.5",
+        "angular-in-memory-web-api": "0.1.13",
+        "bootstrap": "4.0.0-alpha.5",
+        "core-js": "2.5.1",
+        "reflect-metadata": "0.1.10",
+        "rxjs": "5.5.3",
+        "systemjs": "0.20.19",
+        "zone.js": "0.8.18"
+    },
+    "devDependencies": {
+        "@types/core-js": "0.9.43",
+        "@types/node": "6.0.46",
+        "concurrently": "3.5.1",
+        "lite-server": "2.3.0",
+        "typescript": "2.6.2"
+    }
+}
