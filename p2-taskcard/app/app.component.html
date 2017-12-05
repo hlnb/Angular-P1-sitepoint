@@ -4,15 +4,18 @@
             <form (ngSubmit)="addTask()" #taskForm="ngForm" class="form-inline">
                 <div class="form-group">
                     <label for="content-field" class="sr-only"></label>
-                    <input type="text" class="form-control" placeholder="Enter a task &hellip;" [(ngModel)]="currentTask.content" id="content-field" name="content">
+                    <input type="text" class="form-control" placeholder="Enter a task &hellip;" [(ngModel)]="currentTask.content" id="content-field" name="content" required>
                 </div>
-                <button type="submit" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i>Add Task</button>
+                <button type="submit" class="btn btn-primary" [disabled]="taskForm.form.invalid"><i class="fa fa-plus" aria-hidden="true"></i>Add Task</button>
             </form>
 
         </div>
     </div>
     <div class="row">
         <app-card *ngFor="let task of tasks" [task]="task"></app-card>
+        <h5 *ngIf="tasks.length == 0">
+            The task list is empty<br> Add new tasks using the form above.
+        </h5>
     </div>
 
 </div>
